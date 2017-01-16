@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TITLE</title>
+    <meta name="description" content="DESCRIPTION">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-color: #F6F6F6;
+            margin: 80px 80px 100px 100px;
+        }
+
+        div.fixedheader {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            color: #F6F6F6;
+            background: #1C1D21;
+            padding: 20px;
+            font-family: 'Droid Serif', serif;
+            font-size: 16px;
+        }
+
+        .greeting {
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .presentation {
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .levelsofsupport {
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .confirmamt {
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .objectionreplies {
+            border-style: solid;
+            border-width: thin;
+        }
+
+        div.button_placement {
+            text-align: center;
+            margin: auto;
+        }
+
+        .mybutton {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+    <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+
+    <script>
+        location.hash = (location.hash) ? location.hash : " ";
+    </script>
+
+</head>
+
+<body>
+    <div class="fixedheader">
+        @Customer.Dept No@ | @Customer.Sales Type@ | @Customer.number1@ | @Customer.Title@ @Customer.first_name@ @Customer.last_name@ | @Customer.street@ @Customer.city@ @Customer.state@, @Customer.zip@ |
+    </div>
+
+    <h1>
+    <img src="https://crfinc-my.sharepoint.com/personal/jdicks_crf-inc_com/_layouts/15/guestaccess.aspx?guestaccesstoken=OtXM2OfPS0df8vd6I2SDSrqAtAYGtcv8sEFqh%2b42B6M%3d&docid=1c0a7019114854a16840b1aadfa7824eb&rev=1" alt="ahv logo">
+</h1>
+    <p>
+
+        <div class=greeting>
+            <b>[GREETING]</b><br />
+            <br /> Hello <b>(@customer.first_name@ @customer.last_name@)</b>? This is (Your Full Name) CALLING, for the “American Homeless Veterans”. Hope you’re doing okay today, real quick…
+    </p>
+    </div>
+    <p>
+
+        <div class=presentation>
+            <b>[PRESENTATION]</b>
+            <br>
+            <br> I called because The <b>AMERICAN HOMELESS VETERANS</b> are holding their fundraiser. <b>@customer.first_name@ @customer.last_name@</b>, there are almost over ONE HUNDRED THOUSAND veterans on our streets tonight, hungry and homeless. Over
+            FIVE MILLION who served in uniform are disabled and more than half are dealing with chronic pain. The drive is dedicated to supporting homeless veterans and help them return to their rightful place in society, where they belong. As a compensated
+            fundraiser with CRF, we’re calling in the hopes that we can count on your tax deductible donation for the drive. Our “Boosters” are 75, 50 or 35. Can you help with one of these?
+    </P>
+    </div>
+
+    <P>
+        <div class=levelsofsupport>
+            <b>(IF TOO MUCH)</b>
+            <br />
+            <br /> No problem, most are helping out with smaller amounts. Our most popular boosters are 30, 25 or 20. Your support is greatly appreciated and truly needed. Can you help with one of these boosters?
+            <br />
+            <br />
+            <b>(IF STILL TOO MUCH)</b>
+            <br />
+            <br /> That’s okay I completely understand. We have our Purple Heart Booster for 15 dollars so everyone can get involved. WITH 22 VETERANS COMMITING SUICIDE EACH DAY, can we please count on you with a Purple Heart Booster for 15?
+    </p>
+
+    </div>
+
+    <p>
+        <div class=confirmamt>
+            <b>CONFIRM THE AMOUNT</b>
+            <br />
+            <br /> Great Thank You so much Mr./Mrs.@customer.last_name@ Is that $_____ amount definitely comfortable for you? Great thank you again. Now what I’m going to do is get a verifier on the line, they are going to verify your COMMITMENT, as well
+            as name and address. Hold on for a second. (wait for verifier to pick up) Hi, I have
+            <customer name> on the line, can you please verify their
+                <pledge amount> pledge please?
+                    <br />
+                    <br />
+        </div>
+    </p>
+    <div class=objectionreplies>
+        <b>OBJECTION REPLIES</b><br />
+        <br />
+        <b>Can you mail me something / I don’t do anything over the phone</b><br />
+        <br /> The way it works is, we do have the official receipt along with a thank-you letter from the director and a return addressed envelope for you to return your check. We ask that you write “for deposit only” on the back of your check, this
+        way you know exactly where the money is going. So can we count you in for the $____ pledge?? <br /><br />
+        <b>All other reasons why they can’t help</b><br /><br /> I understand how you feel; we have a special spot set aside for people in your position it’s called the Purple Heart Sponsor. It’s only $____ with 22 veterans committing suicide each day,
+        can we count you in for that?<br />
+        <br />
+        </p>
+
+    </div>
+
+    <div class=button_placement>
+        <button class="mybutton" onclick="window.external.notify('ShowGreeting=1')">Fulfillment Form</button>
+    </div>
+
+
+</body>
